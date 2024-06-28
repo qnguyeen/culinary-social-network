@@ -1,9 +1,9 @@
-package com.nguyeen.profile.dto.request;
-
-import java.time.LocalDate;
+package com.nguyeen.identity.dto.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.time.LocalDate;
 
 @Data
 @Builder
