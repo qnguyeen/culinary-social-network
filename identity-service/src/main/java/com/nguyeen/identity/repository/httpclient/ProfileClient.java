@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "profile-service",url = "${app.service.profile}")//domain tới service
 public interface ProfileClient {
 
-    @PostMapping(value = "users",produces = MediaType.APPLICATION_JSON_VALUE)//preoduces : tạo ra request với body dạng JSON
+    @PostMapping(value = "/internal/users",produces = MediaType.APPLICATION_JSON_VALUE)//preoduces : tạo ra request với body dạng JSON
     UserProfileReponse createProfile(@RequestBody ProfileCreationRequest request);
 }
