@@ -5,6 +5,8 @@ app:
   api-prefix: /api
 
 spring:
+  main:
+    web-application-type: reactive
   application:
     name: api-gateway
   cloud:
@@ -14,6 +16,8 @@ spring:
             uri: http://localhost:8080
             predicates:
               - Path=${app.api-prefix}/identity/**
+            filters:
+              - StripPrefix=1
           - id: profile_service
             uri: http://localhost:8081
             predicates:
